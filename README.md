@@ -28,9 +28,50 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
  
   ```
 
-- generare la risposta finale "output" con il prezzo del biglietto scontato o non
+- generare la risposta finale "output" con le nostre condizioni e stampare una risposta differente in base al biglietto
 
+```
 
+  if(age < 18){
+    prezzo -= (prezzo*20)/100;
+    document.getElementById('output').innerHTML = "Biglietto Under-18: " + prezzo.toFixed(2) + "&euro;";
+  }
+  else if (age >= 65) {
+    prezzo -= (prezzo*40)/100;
+    document.getElementById('output').innerHTML = "Biglietto Over-65: " + prezzo.toFixed(2) + "&euro;";
+  }
+  else {
+    document.getElementById('output').innerHTML =
+    "Biglietto Standard: " + prezzo.toFixed(2) + "&euro;";
+  }
+
+  ```
+
+- creare il secondo bottone 'annulla' e far si che quando clicchiamo sul button venga nascosto tutto il contenuto generato e i dati precedentemente inseriti: 
+
+```
+let vedoCnt = true;
+
+document.getElementById('btn_canc').addEventListener('click', function(){
+
+  const km = document.getElementById('km_run')
+  km.value = "";
+
+  const age = document.getElementById('age')
+  age.value = "";
+
+  const bottomCnt = document.querySelector('.bottom_container')
+
+  if(bottomCnt.classList.contains('hide')){
+    bottomCnt.classList.remove('hide');
+  }else{
+    bottomCnt.classList.add('hide');
+  }
+
+  console.log('stai nascondendo tutto',bottomCnt, km, age );
+})
+
+  ```
 
 
 
