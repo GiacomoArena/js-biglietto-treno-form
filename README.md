@@ -27,7 +27,7 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 })
  
   ```
-
+.
 - generare la risposta finale "output" con le nostre condizioni e stampare una risposta differente in base al biglietto
 
 ```
@@ -46,7 +46,7 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
   }
 
   ```
-
+.
 - creare il secondo bottone 'annulla' e far si che quando clicchiamo sul button venga nascosto tutto il contenuto generato e i dati precedentemente inseriti: 
 
 ```
