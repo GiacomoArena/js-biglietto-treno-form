@@ -18,6 +18,11 @@ body h1{
   margin: auto;
   background-color: white;
 }
+
+.top_container span {
+  color: #B91450;
+  font-weight: 600;
+}
 .bottom_container{
   width: 80%;
   margin: auto;
@@ -27,6 +32,14 @@ body h1{
 button{
   margin: 50px 15px !important;
   width: 150px !important;
+  color: #B91450;
+  border-radius: 25px;
+  font-weight: 800;
+}
+input, select {
+  background-color: white;
+  border: 1px solid #B91450;
+  border-radius: 10px;
 }
 
 
