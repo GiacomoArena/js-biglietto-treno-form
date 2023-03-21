@@ -1,12 +1,24 @@
-
+.bg-color{
+  background-color: #808080;
+}
 
 .hide{
   opacity: 0;
 }
 body{
   background-color: #B91450;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body h1{
+  color: white;
+  
 }
 .top_container{
+  width: 80%;
+  margin: auto;
+  background-color: white;
+}
+.bottom_container{
   width: 80%;
   margin: auto;
   background-color: white;
@@ -15,4 +27,22 @@ body{
 button{
   margin: 50px 15px !important;
   width: 150px !important;
+}
+
+
+.table-style{
+  width: 100%;
+  border: 1px solid gray;
+}
+
+table th{
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+table td{
+  padding-bottom: 15px;
+}
+
+table img{
+  width: 50px;
 }

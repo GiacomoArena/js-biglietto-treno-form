@@ -12,42 +12,64 @@
 
   <title>Biglietto treno </title>
 </head>
-<body>
-  <div class="top_container my-5 text-center">
-    <div class="container-fluid d-flex justify-content-center">
-      <div class="row flex-wrap justify-content-center my-5">
-        <div class="col-4">
-          <input type="text" id="name" value="" placeholder="Nome Cognome ">
-        </div>
+  <body>
+    <h1 class="text-center mt-4 text">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    <div class="top_container my-5 text-center">
+      <div class="container-fluid d-flex justify-content-center">
+        <div class="row flex-wrap justify-content-center my-5">
+          <div class="col-4">
+            <input type="text" id="name" value="" placeholder="Nome Cognome ">
+          </div>
 
-        <div class="col-4">
-          <input type="text" id="km_run" value="" placeholder="Quanti km ?">
-        </div>
+          <div class="col-4">
+            <input type="text" id="km_run" value="" placeholder="Quanti km ?">
+          </div>
 
-        <div class="col-4">
-          <select id="my-select">
-            <option value="minorenne">Minorenne</option>
-            <option value="standard">Standard</option>
-            <option value="over">Over-65</option>
-          </select>
-        </div>  
-      <button id="btn_genera">Genera</button>
-      <button id="btn_canc">Annulla</button>
-  
+          <div class="col-4">
+            <select id="my-select">
+              <option value="minorenne">Minorenne</option>
+              <option value="standard">Standard</option>
+              <option value="over">Over-65</option>
+            </select>
+          </div>  
+        <button id="btn_genera">Genera</button>
+        <button id="btn_canc">Annulla</button>
+    
+        </div>
+      </div>
+      
+    </div>
+    <h1 class="text-center mt-4 text">IL TUO BIGLIETTO</h1>
+    <div class="bottom_container p-3">
+      <div class="container-fluid">
+        <span>DETTAGLIO PASSEGGERI</span>
+        <table class="table-style">
+          <tr>
+            <th class="bg-color fw-bolder">NOME PASSEGGERO</th>
+            <th>Offerta</th>
+            <th>Carrozza </th>
+            <th>codice CP </th>
+            <th>Costo Biglietto</th>
+          </tr>
+          <tr>
+            <td class="text-capitalize bg-color" id="nome-utente"></td>
+
+            <td id="offerta"></td>
+
+            <td id="carrozza"></td>
+
+            <td id="codice-cp"></td>
+            <td id="output"></td>
+          </tr>
+          
+        </table>
       </div>
     </div>
-  </div>
-  
-  <div class="bottom_container">
-    <h2 id="nome-utente"></h2>
-    <h2 id="output"> </h2>
 
-  </div>
-
-  
+    
 
 
 
-  <script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
