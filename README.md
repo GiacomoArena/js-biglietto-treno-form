@@ -104,8 +104,9 @@ document.getElementById('btn_canc').addEventListener('click', function(){
 ci dará un numero da 1 a 10 che ipotizziamo sia la carrozza.
 
 - iniziare a modificare il css per rendere piú aesthetic la page
+quindi mettere gli input in un container suddiviso da 3 colonne e sotto i due button.
 
--
+-creo la forma del ticket.
 
 
 
