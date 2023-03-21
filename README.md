@@ -25,29 +25,41 @@ Il recap dei dati e l’output del prezzo finale, andranno quindi stampati in pa
  document.getElementById('btn_genera').addEventListener('click', function(){
   const nome = document.getElementById('name').value;
   const km = document.getElementById('km_run').value;
+
+  const select = document.getElementById("my-select");
+  const selectedValue = select.value;
   let prezzo = 0.21 * km;
   max = 10;
   min = 1;
   let carrozza = Math.floor(Math.random() * (max - min +1) + min);
-  
-  const select = document.getElementById("my-select");
-  const selectedValue = select.value;
+  document.getElementById('carrozza').innerHTML = carrozza
 
-  document.getElementById('nome-utente').innerHTML = `
-  Nome Passeggero: ${nome}
+
+  codMin = 5000
+  codMax = 9999
+
+  let codiceCp = Math.floor(Math.random() * (codMax - codMin +1) + codMin);
+  document.getElementById('codice-cp').innerHTML = codiceCp;
+  
+
+  document.getElementById('nome-utente').innerHTML = `${nome}
   `;
+
+  
 
   if (selectedValue === 'minorenne') {
     prezzo -= (prezzo*20)/100;
-  document.getElementById('output').innerHTML = "Biglietto Under-18: " + carrozza + " " + prezzo.toFixed(2) + "&euro;";
+  document.getElementById('output').innerHTML =  prezzo.toFixed(2) + "&euro;";
+  document.getElementById('offerta').innerHTML = "Biglietto Under-18"
   } 
   else if (selectedValue === 'standard') {
-    document.getElementById('output').innerHTML =
-  "Biglietto Standard: " + carrozza + " " + prezzo.toFixed(2) + "&euro;";
+    document.getElementById('output').innerHTML =  prezzo.toFixed(2) + "&euro;";
+    document.getElementById('offerta').innerHTML = "Biglietto Standard"
   } 
   else if (selectedValue === 'over') {
     prezzo -= (prezzo*40)/100;
-  document.getElementById('output').innerHTML = "Biglietto Over-65: " + carrozza + " " + prezzo.toFixed(2) + "&euro;";
+    document.getElementById('output').innerHTML =  prezzo.toFixed(2) + "&euro;";
+    document.getElementById('offerta').innerHTML = "Biglietto Over-65"
   } 
 
   const bottomCnt = document.querySelector('.bottom_container')
@@ -65,7 +77,7 @@ Il recap dei dati e l’output del prezzo finale, andranno quindi stampati in pa
   ```
 
 .
-- creare il secondo bottone 'annulla' e far si che quando clicchiamo sul button venga nascosto tutto il contenuto generato e i dati precedentemente inseriti: 
+- creare il secondo bottone 'annulla' e far si che quando clicchiamo sul button venga nascosto tutto il contenuto generato   e i dati precedentemente inseriti con una classe display:none;: 
 
 ```
 
@@ -103,10 +115,25 @@ document.getElementById('btn_canc').addEventListener('click', function(){
 ```
 ci dará un numero da 1 a 10 che ipotizziamo sia la carrozza.
 
+  .
+  - creare un let codiceCp che attraverso la formula
+  ```
+   codMin = 5000
+  codMax = 9999
+
+  let codiceCp = Math.floor(Math.random() * (codMax - codMin +1) + codMin);
+  document.getElementById('codice-cp').innerHTML = codiceCp;
+```
+ci dará un numero da 5000 a 9999 che ipotizziamo sia la il codice cp del biglietto.
+.
+
+
 - iniziare a modificare il css per rendere piú aesthetic la page
 quindi mettere gli input in un container suddiviso da 3 colonne e sotto i due button.
 
--creo la forma del ticket.
+- creo la forma del ticket, con una tabella contenente tutti i valori: offerta, nome passeggero, carrozza, cp, costo biglietto
+
+- completare le ultime modifiche grafiche
 
 
 
